@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maybe Someday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2e9; /* زيتوني فاتح */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .hint {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        input[type="password"] {
+            font-size: 18px;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .content {
+            text-align: right;
+            direction: rtl;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="password-section">
+            <div class="message">أدخل كلمة السر لعرض المحتوى:</div>
+            <input type="password" id="password" placeholder="كلمة السر">
+            <button onclick="checkPassword()">فتح</button>
+            <div class="hint">التلميح: the name i used to call u</div>
+        </div>
+        <div class="content hidden">
+            <h1>Maybe Someday</h1>
+            <p>الفقد أيضًا حالة من الصيام الطويل، عندما تصل حدًا من الجوع والعطش، تفتح لك الذاكرة أطباقها فتأكل حتّىٰ ترتوي بدموعك، وهكذا يستمر صومك للأبد!</p>
+            <p>بقيت احس بغصة الفقد كلّ ما صار حدث وتمنيتك موجود حتّىٰ اشاركك أياه، كلّ ما تفوقت بمرحلة وسويت إنجاز وحسيت اريد اشوف فرحتك الي شلون تصير، كلّ ما أحتاجيت اسمع صوتك وكلماتك وخوفك علية، كلّ ما سمعت اغنية لو قريت أقتباس يوصف حالي بدونك، وشلون الأيّام موحشة وخلتني اعيش بداخلي شعور الوحشة بطريقة مؤذية، حتبقى الجزء المفقود بگلبي الجزء الواضح والملموس، مكانك فارغ .. فراغ موحش يبدل لمعة عيوني كل مرة بدموع، ورغم عصرة الألم الّي احسها ماكو شي يطمئن بكلّ هذا غير إنو رب العالمين موجود وشايف وعارف بكل الي دامر بي ، يمكن للأبد حتكون بخانة ذكرياتي وماكو بحياتي وواقعي ، يمكن كدام الكل وكدامي جنت اكثر بشر اذاني ، بس تبقى الذكريات الحلوة ، تبقى الاغلى بگلبي ، ابد ما حسيت بالندم على محبتي الك ، بس مصير كل انسان بحياتنا يكون درس في وقتاً ما وتنتهي طرقنا الي تقاطعت كثير ، مصيرنا الوداع والنهاية ، بس جانت امنيتي النهاية تكون افضل من هيج ، تستحق عالاقل كل الحُب الجان بيناتنا ..</p>
+            <p>أحبك نُعماني ، مع السلامة</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const contentSection = document.querySelector('.content');
+            const passwordSection = document.querySelector('.password-section');
+
+            if (password === 'نُعماني') {
+                passwordSection.classList.add('hidden');
+                contentSection.classList.remove('hidden');
+            } else {
+                alert('كلمة السر غير صحيحة.');
+            }
+        }
+    </script>
+</body>
+</html>
